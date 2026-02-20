@@ -14,7 +14,7 @@ ENDPOINT = "https://openrouter.ai/api/v1"
 API_KEY = "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"
 LLM_MODEL = "nvidia/nemotron-3-nano-30b-a3b:free"
 
-TOP_K = 5
+TOP_K = 10
 MIN_SIMILARITY_THRESHOLD = 0.3  # Filter out irrelevant chunks
 
 # Initialize models
@@ -29,13 +29,13 @@ client = OpenAI(
 RESPONSE_FORMAT = """
 ### What This Means
 
-{2–4 sentence explanation of how problem words affect clarity, credibility, and listener perception.}
+{2–4 sentences explanation of how problem words affect clarity, credibility, and listener perception.}
 
 ---
 
 ### Why This May Be Happening
 
-{Short explanation based on context: thinking while speaking, anxiety, rapid pace, complex sentence structure, etc.}
+{Short explanation based on context: reasons why problem is arising}
 
 ---
 
@@ -296,10 +296,18 @@ def run_rag(
 # =============================================================================
 
 if __name__ == "__main__":
-    INDEX_PATH = "RAG_knowledge/index/stuttering"
 
-    problem = "The user stutters when speaking"
+    INDEX_PATH = "RAG_knowledge/index/nervouseness"
+    problem = "The user sounds nervouse when speaking"
+
+    # INDEX_PATH = "RAG_knowledge/index/filler_words"
+    # problem = "The user uses too many filler words when speaking"
+
+    # INDEX_PATH = "RAG_knowledge/index/stuttering"
+    # problem = "The user stutters a lot when speaking"
+
     request = "Explain the problem, describe what reasons behind it, provide simple, actionable improvement advice with a practice exercise"
+    
     query = f"{problem}. {request}"
 
     result = run_rag(INDEX_PATH, query, verbose=False)
