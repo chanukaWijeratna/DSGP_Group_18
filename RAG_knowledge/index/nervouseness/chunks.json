@@ -68,16 +68,16 @@
     }
   ],
   "config": {
-    "chunk_size": 200,
-    "chunk_overlap": 40,
+    "chunk_size": 150,
+    "chunk_overlap": 35,
     "min_chunk_size": 50,
     "embedding_model": "all-MiniLM-L6-v2",
     "embedding_dimension": 384
   },
   "stats": {
-    "total_words": 892,
-    "total_chars": 5260,
-    "file_size_bytes": 5351,
-    "indexed_date": "2026-02-19T18:33:39.345024"
+    "total_words": 893,
+    "total_chars": 5266,
+    "file_size_bytes": 5357,
+    "indexed_date": "2026-02-22T17:18:26.495364"
   }
 }

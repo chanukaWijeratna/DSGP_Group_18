@@ -12,8 +12,8 @@ from typing import List, Dict, Tuple
 
 KNOWLEDGE_DIR = "RAG_knowledge/original"
 OUTPUT_DIR = "RAG_knowledge/index"
-CHUNK_SIZE = 200  # Reduced from 250 for better focused chunks
-CHUNK_OVERLAP = 40  # Proportionally reduced
+CHUNK_SIZE = 150  # Reduced from 250 for better focused chunks
+CHUNK_OVERLAP = 35  # Proportionally reduced
 MIN_CHUNK_SIZE = 50  # Minimum words for a valid chunk
 
 embedding_model = SentenceTransformer("all-MiniLM-L6-v2")

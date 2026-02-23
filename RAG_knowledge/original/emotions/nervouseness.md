@@ -30,7 +30,7 @@ All humans have vocal cords — also called vocal folds since they’re folds of
 
 And this matters more and more now, as many of our meetings and interviews take place over conference calls or low-res video chats. As a result, says Gartner-Schmidt, “the voice is substantially taking over more and more of how we are perceived.”
 
-## Solution
+## Quick Practice
 
 Hold up your index finger a few inches in front of your mouth. As you exhale steadily, make a “Wooooooo” noise (think: little kid pretending to be a ghost) for 5 to 10 seconds. Do this 5 to 10 times.
 

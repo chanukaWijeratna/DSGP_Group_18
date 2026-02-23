@@ -1,7 +1,7 @@
 {
   "source_file": "RAG_knowledge/original\\bad_habits\\filler_words.md",
   "file_name": "filler_words",
-  "num_chunks": 23,
+  "num_chunks": 26,
   "chunks": [
     {
       "text": "Recently I was interviewed by a New York Times reporter and at times it was difficult for me to focus on the content of my responses. Frankly, I was worried I’d let a stray “um,” “ah,” or “so” slip from my mouth. Why was I so concerned? The reporter was asking my advice on how to keep our language filler-free.",
@@ -88,18 +88,44 @@
       "h3": ""
     },
     {
-      "text": "As the show host for “The Public Speaker: Quick and Dirty Tips for Improving Your Communication Skills,“ I regularly receive questions from my listeners. Perhaps the most commonly asked question goes like this … Most of the time I feel that I am reasonably articulate, but on occasion my sentences get sprinkled with the flavorless additives “um,” “uh,” and “er.” I know it is a habit from childhood that I just can’t seem to shake. Could you please help me? Here’s how I always respond: You know, like, OMG! Although it’s difficult to completely rid yourself of “credibility killers” in your speech (e.g., like, so, you know, right, uh, ah), it’s actually pretty easy to reduce them. Technically, they are called disfluencies. According to Wikipedia, “disfluencies include any of various breaks, irregularities, or utterances … words and sentences that are cut off mid-utterance, phrases that are restarted or repeated … grunts or unrecognizable utterances occurring as ‘fillers.’”",
+      "text": "[American Chemical Society – inChemistry Magazine > Introduction]\n\nAs the show host for “The Public Speaker: Quick and Dirty Tips for Improving Your Communication Skills,“ I regularly receive questions from my listeners. Perhaps the most commonly asked question goes like this … Most of the time I feel that I am reasonably articulate, but on occasion my sentences get sprinkled with the flavorless additives “um,” “uh,” and “er.” I know it is a habit from childhood that I just can’t seem to shake. Could you please help me? Here’s how I always respond: You know, like, OMG! Although it’s difficult to completely rid yourself of “credibility killers” in your speech (e.g., like, so, you know, right, uh, ah), it’s actually pretty easy to reduce them. Technically, they are called disfluencies. According to Wikipedia, “disfluencies include any of various breaks, irregularities, or utterances … words and sentences that are cut off mid-utterance, phrases that are restarted or repeated …",
+      "original_text": "As the show host for “The Public Speaker: Quick and Dirty Tips for Improving Your Communication Skills,“ I regularly receive questions from my listeners. Perhaps the most commonly asked question goes like this … Most of the time I feel that I am reasonably articulate, but on occasion my sentences get sprinkled with the flavorless additives “um,” “uh,” and “er.” I know it is a habit from childhood that I just can’t seem to shake. Could you please help me? Here’s how I always respond: You know, like, OMG! Although it’s difficult to completely rid yourself of “credibility killers” in your speech (e.g., like, so, you know, right, uh, ah), it’s actually pretty easy to reduce them. Technically, they are called disfluencies. According to Wikipedia, “disfluencies include any of various breaks, irregularities, or utterances … words and sentences that are cut off mid-utterance, phrases that are restarted or repeated …",
       "header": "American Chemical Society – inChemistry Magazine > Introduction",
       "h1": "American Chemical Society – inChemistry Magazine",
       "h2": "Introduction",
-      "h3": ""
+      "h3": "",
+      "chunk_num": 0,
+      "is_partial": true
     },
     {
-      "text": "For those with trouble is in this area, you are not alone. Spontaneous conversation is notoriously disfluent. In fact, according to researchers, disfluencies sometimes represent up to about 20% of the “words” in everyday conversation. In fact, if you listen to President Barack Obama when he is “off teleprompter,” you’ll notice that he struggles with this, too. Unfortunately, excessive use of filler words can have a significant negative impact on listeners. In 2009, when Caroline Kennedy announced her candidacy for Senator of New York, she used many “ums” and “ahs” during one particular interview with the New York Times, and she said “y’know” 139 times. You probably saw the YouTube video where she was mocked with a buzzer — 30 times in less than two-and-a-half minutes! Research suggests that utterances of “ah” and “um” in spontaneous conversation signal an impending pause. However, when you are in front of an audience, long pauses in your speech give the impression that you are unprepared. Which, of course, is a bad thing.",
+      "text": "[American Chemical Society – inChemistry Magazine > Introduction]\n\nreduce them. Technically, they are called disfluencies. According to Wikipedia, “disfluencies include any of various breaks, irregularities, or utterances … words and sentences that are cut off mid-utterance, phrases that are restarted or repeated … grunts or unrecognizable utterances occurring as ‘fillers.’”",
+      "original_text": "reduce them. Technically, they are called disfluencies. According to Wikipedia, “disfluencies include any of various breaks, irregularities, or utterances … words and sentences that are cut off mid-utterance, phrases that are restarted or repeated … grunts or unrecognizable utterances occurring as ‘fillers.’”",
+      "header": "American Chemical Society – inChemistry Magazine > Introduction",
+      "h1": "American Chemical Society – inChemistry Magazine",
+      "h2": "Introduction",
+      "h3": "",
+      "chunk_num": 1,
+      "is_partial": true
+    },
+    {
+      "text": "[American Chemical Society – inChemistry Magazine > Incidents and Research Material]\n\nFor those with trouble is in this area, you are not alone. Spontaneous conversation is notoriously disfluent. In fact, according to researchers, disfluencies sometimes represent up to about 20% of the “words” in everyday conversation. In fact, if you listen to President Barack Obama when he is “off teleprompter,” you’ll notice that he struggles with this, too. Unfortunately, excessive use of filler words can have a significant negative impact on listeners. In 2009, when Caroline Kennedy announced her candidacy for Senator of New York, she used many “ums” and “ahs” during one particular interview with the New York Times, and she said “y’know” 139 times. You probably saw the YouTube video where she was mocked with a buzzer — 30 times in less than two-and-a-half minutes! Research suggests that utterances of “ah” and “um” in spontaneous conversation signal an impending pause. However, when you are in front of an audience,",
+      "original_text": "For those with trouble is in this area, you are not alone. Spontaneous conversation is notoriously disfluent. In fact, according to researchers, disfluencies sometimes represent up to about 20% of the “words” in everyday conversation. In fact, if you listen to President Barack Obama when he is “off teleprompter,” you’ll notice that he struggles with this, too. Unfortunately, excessive use of filler words can have a significant negative impact on listeners. In 2009, when Caroline Kennedy announced her candidacy for Senator of New York, she used many “ums” and “ahs” during one particular interview with the New York Times, and she said “y’know” 139 times. You probably saw the YouTube video where she was mocked with a buzzer — 30 times in less than two-and-a-half minutes! Research suggests that utterances of “ah” and “um” in spontaneous conversation signal an impending pause. However, when you are in front of an audience,",
       "header": "American Chemical Society – inChemistry Magazine > Incidents and Research Material",
       "h1": "American Chemical Society – inChemistry Magazine",
       "h2": "Incidents and Research Material",
-      "h3": ""
+      "h3": "",
+      "chunk_num": 0,
+      "is_partial": true
+    },
+    {
+      "text": "[American Chemical Society – inChemistry Magazine > Incidents and Research Material]\n\nwith a buzzer — 30 times in less than two-and-a-half minutes! Research suggests that utterances of “ah” and “um” in spontaneous conversation signal an impending pause. However, when you are in front of an audience, long pauses in your speech give the impression that you are unprepared. Which, of course, is a bad thing.",
+      "original_text": "with a buzzer — 30 times in less than two-and-a-half minutes! Research suggests that utterances of “ah” and “um” in spontaneous conversation signal an impending pause. However, when you are in front of an audience, long pauses in your speech give the impression that you are unprepared. Which, of course, is a bad thing.",
+      "header": "American Chemical Society – inChemistry Magazine > Incidents and Research Material",
+      "h1": "American Chemical Society – inChemistry Magazine",
+      "h2": "Incidents and Research Material",
+      "h3": "",
+      "chunk_num": 1,
+      "is_partial": true
     },
     {
       "text": "My first suggestion is to prepare and practice as much as possible so that you can become more comfortable with the material. Practice, via video, is perhaps the single best way to relax and become more comfortable with your presentation. That advice will help you in general; however, perhaps the most important step toward more fluent speaking is to become aware of your distracting speech habits. The fastest way to find out if you have trouble in this area is to ask a close trusted friend (or pay a public speaking coach).",
@@ -109,11 +135,24 @@
       "h3": "Solution 1 - Prepare and practice"
     },
     {
-      "text": "If recording seems like too much effort, just focus, for one full week, on listening — really listening — for distracters when you talk. Some experts like to suggest putting tiny “um” and “ah” stickers on your computer or cell phone as reminders. I recently attended a training session and the expert suggested wearing a rubber band around your wrist. The idea was to snap the rubber band every time a disfluency occurred. After a week of listening, or recording and listening, (or worse, a week of snapping your wrist with a rubber band), you’ll become acutely aware of your specific problems. And that’s exactly what you need: awareness. You need to be able to hear your disfluencies in your mind before you blurt them out. I can’t stress this enough. You need to be able to hear every time you use a filler word, or you won’t be able to fix this problem.",
+      "text": "[American Chemical Society – inChemistry Magazine > Solutions > Solution 2 - Listen]\n\nIf recording seems like too much effort, just focus, for one full week, on listening — really listening — for distracters when you talk. Some experts like to suggest putting tiny “um” and “ah” stickers on your computer or cell phone as reminders. I recently attended a training session and the expert suggested wearing a rubber band around your wrist. The idea was to snap the rubber band every time a disfluency occurred. After a week of listening, or recording and listening, (or worse, a week of snapping your wrist with a rubber band), you’ll become acutely aware of your specific problems. And that’s exactly what you need: awareness. You need to be able to hear your disfluencies in your mind before you blurt them out. I can’t stress this enough. You need to be able to hear every time you use a filler word, or you won’t be able",
+      "original_text": "If recording seems like too much effort, just focus, for one full week, on listening — really listening — for distracters when you talk. Some experts like to suggest putting tiny “um” and “ah” stickers on your computer or cell phone as reminders. I recently attended a training session and the expert suggested wearing a rubber band around your wrist. The idea was to snap the rubber band every time a disfluency occurred. After a week of listening, or recording and listening, (or worse, a week of snapping your wrist with a rubber band), you’ll become acutely aware of your specific problems. And that’s exactly what you need: awareness. You need to be able to hear your disfluencies in your mind before you blurt them out. I can’t stress this enough. You need to be able to hear every time you use a filler word, or you won’t be able",
       "header": "American Chemical Society – inChemistry Magazine > Solutions > Solution 2 - Listen",
       "h1": "American Chemical Society – inChemistry Magazine",
       "h2": "Solutions",
-      "h3": "Solution 2 - Listen"
+      "h3": "Solution 2 - Listen",
+      "chunk_num": 0,
+      "is_partial": true
+    },
+    {
+      "text": "[American Chemical Society – inChemistry Magazine > Solutions > Solution 2 - Listen]\n\nhear your disfluencies in your mind before you blurt them out. I can’t stress this enough. You need to be able to hear every time you use a filler word, or you won’t be able to fix this problem.",
+      "original_text": "hear your disfluencies in your mind before you blurt them out. I can’t stress this enough. You need to be able to hear every time you use a filler word, or you won’t be able to fix this problem.",
+      "header": "American Chemical Society – inChemistry Magazine > Solutions > Solution 2 - Listen",
+      "h1": "American Chemical Society – inChemistry Magazine",
+      "h2": "Solutions",
+      "h3": "Solution 2 - Listen",
+      "chunk_num": 1,
+      "is_partial": true
     },
     {
       "text": "If you've done your homework, you'll know when one of your credibility killers is just about to escape from your mouth. Then, all you need to do is to keep quiet. Of course, slowing down will also help. I know, it's easier said than done! At first you may have awkward pauses in your speech, but that's still better — actually far better — than speech peppered with \"likes\" and \"ums.\" I'm convinced President Obama is working on this very issue, and that's why you often hear long pauses in his speech. With patience and practice, eventually the pauses get shorter. With time, you'll be more fluent and have fewer \"ums\" and \"ahs.\" It's worth it to take some time to record and listen to yourself. Using filler words can have a significant negative impact.",
@@ -166,8 +205,8 @@
     }
   ],
   "config": {
-    "chunk_size": 200,
-    "chunk_overlap": 40,
+    "chunk_size": 150,
+    "chunk_overlap": 35,
     "min_chunk_size": 50,
     "embedding_model": "all-MiniLM-L6-v2",
     "embedding_dimension": 384
@@ -176,6 +215,6 @@
     "total_words": 2566,
     "total_chars": 15330,
     "file_size_bytes": 15689,
-    "indexed_date": "2026-02-19T18:33:39.043078"
+    "indexed_date": "2026-02-22T17:18:26.227777"
   }
 }

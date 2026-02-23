@@ -14,7 +14,7 @@ ENDPOINT = "https://openrouter.ai/api/v1"
 API_KEY = "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"
 LLM_MODEL = "nvidia/nemotron-3-nano-30b-a3b:free"
 
-TOP_K = 10
+TOP_K = 6
 MIN_SIMILARITY_THRESHOLD = 0.3  # Filter out irrelevant chunks
 
 # Initialize models
@@ -186,15 +186,15 @@ def call_llm(context_chunks: List[Dict], user_query: str, verbose: bool = False)
     prompt = f"""You are a supportive and knowledgeable speech feedback assistant specializing in verbal fluency.
 
 **CRITICAL INSTRUCTIONS:**
-- Use ONLY the context provided below to answer
-- Stricly follow the OUTPUT FORMAT given
-- Do NOT make medical diagnoses or claims
-- Do NOT add information not present in the context
-- Keep tone encouraging, practical, and supportive
-- Be specific with actionable advice
-- Cite techniques mentioned in the context when possible
+- Use ONLY the information explicitly provided in the CONTEXT section.
+- Do NOT introduce concepts, causes, techniques, or examples that are not directly supported by the context.
+- Do NOT mention medical diagnoses, disorders, or treatments unless explicitly stated in the context.
+- If the context does not provide enough information for a section, state that briefly instead of guessing.
+- Keep the response under 300 words total.
+- Maintain a supportive, practical, non-judgmental tone.
+- Frame all guidance as non-diagnostic, general speaking support.
 
-**OUTPUT FORMAT:**
+**OUTPUT FORMAT (FOLLOW EXACTLY):**
 {RESPONSE_FORMAT}
 
 **CONTEXT FROM KNOWLEDGE BASE:**
@@ -298,7 +298,7 @@ def run_rag(
 if __name__ == "__main__":
 
     INDEX_PATH = "RAG_knowledge/index/nervouseness"
-    problem = "The user sounds nervouse when speaking"
+    problem = "The user shows nervouseness when speaking"
 
     # INDEX_PATH = "RAG_knowledge/index/filler_words"
     # problem = "The user uses too many filler words when speaking"
@@ -306,13 +306,16 @@ if __name__ == "__main__":
     # INDEX_PATH = "RAG_knowledge/index/stuttering"
     # problem = "The user stutters a lot when speaking"
 
-    request = "Explain the problem, describe what reasons behind it, provide simple, actionable improvement advice with a practice exercise"
+    request = "Explain the problem, describe what reasons behind it, provide simple, actionable improvement advice with a quick practice exercise"
     
     query = f"{problem}. {request}"
 
-    result = run_rag(INDEX_PATH, query, verbose=False)
-    
+    result = run_rag(INDEX_PATH, query, verbose=False)['response']
+
+    result.replace("}", "")
+    result.replace("{", "")
+
     print("="*80)
     print("RESPONSE")
     print("="*80 + "\n")
-    print(result['response'])
+    print(result.strip("{}"))
