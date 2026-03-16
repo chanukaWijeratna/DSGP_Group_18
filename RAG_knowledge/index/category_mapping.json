@@ -1,0 +1,10 @@
+{
+  "fast_speaking_rate": "bad_habits",
+  "filler_words": "bad_habits",
+  "monotone_voice": "bad_habits",
+  "dysathria": "deviations",
+  "stuttering": "deviations",
+  "emotion_inconsistency": "emotions",
+  "negative_emotion": "emotions",
+  "nervouseness": "emotions"
+}
