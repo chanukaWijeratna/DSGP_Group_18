@@ -16,8 +16,6 @@ Dysarthria can be caused by conditions that make it hard to move the muscles in 
 
 Communication problems may affect your relationships with family and friends. These problems also may make social situations challenging.
 
-Communication problems may affect your relationships with family and friends. These problems also may make social situations challenging.
-
 # Dysarthria (difficulty speaking) NHS.uk
 
 ## Introduction

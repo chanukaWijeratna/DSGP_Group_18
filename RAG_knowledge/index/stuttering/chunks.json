@@ -1,119 +1,65 @@
 {
-  "source_file": "RAG_knowledge/original\\deviations\\stuttering.md",
+  "source_file": "RAG_knowledge\\original\\deviations\\stuttering.md",
   "file_name": "stuttering",
-  "num_chunks": 12,
+  "category": "deviations",
+  "relative_path": "deviations\\stuttering.md",
+  "model": "all-MiniLM-L6-v2",
+  "chunk_size_tokens": 512,
+  "num_chunks": 7,
+  "embedding_dim": 384,
+  "stats": {
+    "total_words": 1419,
+    "indexed_date": "2026-03-15T01:55:18.799970"
+  },
   "chunks": [
     {
-      "text": "Personal feelings like Frustration, Excitement, Nervousness, Feeling rushed and the actions of others like Making fun of the person who stutters, Appearing impatient with the person who stutters, Bringing attention to the speech of a person who stutters and Trying to \"help\" by finishing words for the person who stutters can affect the amount a person stutters. Here are some examples of things that may cause more stuttering:",
+      "text": "people who stutter usually have more — and different types of — disfluencies than other people. they may repeat parts of words, stretch a sound out for a long time, or get stuck before starting a word or in the middle of saying a word. stuttering also may include tension and negative feelings about talking. people who stutter may try to hide their stuttering because they are worried about what others may think. they may avoid certain words or situations — like talking on the phone. stuttering can change from day to day. at times, you may be more fluent ; at other times, you may stutter more. stress or excitement can lead to more stuttering.",
+      "header": "American Speech-Language-Hearing Association > Introduction",
+      "h1": "American Speech-Language-Hearing Association",
+      "h2": "Introduction",
+      "h3": ""
+    },
+    {
+      "text": "the following types of disfluencies happen when someone stutters, part - word repetitions — \" i w - w - w - want a drink. \" one - syllable word repetitions — \" go - go - go away. \" long, held - out sounds — \" ssssssssam is nice. \" blocks or stops — \" i want a ( pause ) cookie. \"",
+      "header": "American Speech-Language-Hearing Association > Signs of Stuttering",
+      "h1": "American Speech-Language-Hearing Association",
+      "h2": "Signs of Stuttering",
+      "h3": ""
+    },
+    {
+      "text": "personal feelings like frustration, excitement, nervousness, feeling rushed and the actions of others like making fun of the person who stutters, appearing impatient with the person who stutters, bringing attention to the speech of a person who stutters and trying to \" help \" by finishing words for the person who stutters can affect the amount a person stutters. here are some examples of things that may cause more stuttering :",
       "header": "American Speech-Language-Hearing Association > Possible Reasons Causing Stutter",
       "h1": "American Speech-Language-Hearing Association",
       "h2": "Possible Reasons Causing Stutter",
       "h3": ""
     },
     {
-      "text": "If only you could talk without stuttering!  You may be frustrated when stuttering occurs.  You may get dis­couraged and angry with yourself and at the world.  Nothing you try seems to be effective for long.  At its mildest, stut­tering can be annoying.  At its worst, it interferes greatly with communication and with your life.  Past experiences may have strengthened the belief that nothing you do will make any difference in how you talk. That’s where you’re wrong.",
+      "text": "if only you could talk without stuttering! you may be frustrated when stuttering occurs. you may get discouraged and angry with yourself and at the world. nothing you try seems to be effective for long. at its mildest, stuttering can be annoying. at its worst, it interferes greatly with communication and with your life. past experiences may have strengthened the belief that nothing you do will make any difference in how you talk. that ’ s where you ’ re wrong. it is possible to change the behavior that you do when you stutter. not by magic. not by asking others to do the changing for you. the ingredients of change are firmly rooted in knowledge. you need information about the process of speaking fluently. you need information about the disorder of stuttering. and, you need to experiment with various ways of stuttering. a tall order but not if you have a plan.",
       "header": "What You Can Do to Help Yourself - The Stuttering Foundation > Introduction",
       "h1": "What You Can Do to Help Yourself - The Stuttering Foundation",
       "h2": "Introduction",
       "h3": ""
     },
     {
-      "text": "It is possible to change the behavior that you do when you stutter.  Not by magic. Not by asking others to do the changing for you. The ingredients of change are firmly rooted in knowledge. You need information about the process of speaking fluently. You need information about the disorder of stuttering.  And, you need to experiment with various ways of stuttering.  A tall order  but not if you have a plan.",
-      "header": "What You Can Do to Help Yourself - The Stuttering Foundation > Introduction",
-      "h1": "What You Can Do to Help Yourself - The Stuttering Foundation",
-      "h2": "Introduction",
-      "h3": ""
-    },
-    {
-      "text": "[What You Can Do to Help Yourself - The Stuttering Foundation > Solutions]\n\nTo begin with, change your focus. One of the most difficult concepts to grasp is this: the behavior that occurs when you try-not-to-stutter contributes to the severity of the stuttering. Try the opposite behavior: try to stutter. Become very familiar with exactly what you do while stuttering if you are to change it. Too difficult? You simply want the stuttering to go away — never to occur again. That’s a normal reaction. You dislike repeating. You do not want to hear or see or physically feel stuttering. The experiences of feeling “stuck” are frustrating and perhaps frightening. Tremors in your lips or jaw may give rise to panic. It is hard work. Harder than you have ever done before. It is less fearful to study and analyze stuttering under the guidance of a fluency therapist. But you can do some of the identifying and categorizing of behavior on your own",
-      "original_text": "To begin with, change your focus. One of the most difficult concepts to grasp is this: the behavior that occurs when you try-not-to-stutter contributes to the severity of the stuttering. Try the opposite behavior: try to stutter. Become very familiar with exactly what you do while stuttering if you are to change it. Too difficult? You simply want the stuttering to go away — never to occur again. That’s a normal reaction. You dislike repeating. You do not want to hear or see or physically feel stuttering. The experiences of feeling “stuck” are frustrating and perhaps frightening. Tremors in your lips or jaw may give rise to panic. It is hard work. Harder than you have ever done before. It is less fearful to study and analyze stuttering under the guidance of a fluency therapist. But you can do some of the identifying and categorizing of behavior on your own",
-      "header": "What You Can Do to Help Yourself - The Stuttering Foundation > Solutions",
-      "h1": "What You Can Do to Help Yourself - The Stuttering Foundation",
-      "h2": "Solutions",
-      "h3": "",
-      "chunk_num": 0,
-      "is_partial": true
-    },
-    {
-      "text": "[What You Can Do to Help Yourself - The Stuttering Foundation > Solutions]\n\nhave ever done before. It is less fearful to study and analyze stuttering under the guidance of a fluency therapist. But you can do some of the identifying and categorizing of behavior on your own if you remember to do this “change work” in small doses. Don’t overwhelm yourself. Tomorrow is another day. It took years for stuttering to develop to the level and in the particular pattern that occurs at this point in time. The process of unraveling the pattern and changing the disfluent behavior takes time also.",
-      "original_text": "have ever done before. It is less fearful to study and analyze stuttering under the guidance of a fluency therapist. But you can do some of the identifying and categorizing of behavior on your own if you remember to do this “change work” in small doses. Don’t overwhelm yourself. Tomorrow is another day. It took years for stuttering to develop to the level and in the particular pattern that occurs at this point in time. The process of unraveling the pattern and changing the disfluent behavior takes time also.",
-      "header": "What You Can Do to Help Yourself - The Stuttering Foundation > Solutions",
-      "h1": "What You Can Do to Help Yourself - The Stuttering Foundation",
-      "h2": "Solutions",
-      "h3": "",
-      "chunk_num": 1,
-      "is_partial": true
-    },
-    {
-      "text": "[What You Can Do to Help Yourself - The Stuttering Foundation > Solutions]\n\nStudy how fluent talking is done. You need to understand the way in which the activity of talking occurs physically. Sometimes explanations are inaccurate because information is omitted in the writer’s attempt to simplify and to be brief. Obtain a textbook from the library. Search out information that provides an explanation of how breathing for living and breathing for speaking occur and differ. Sit quietly. Focus on breathing in a natural way. Discover how air flows in and out of your mouth. When you begin to speak, part of the process changes. Discover how voice starts easily and gently when you are relaxed and unhurried. Notice how your lips and tongue and lower jaw move to shape the air and voice into words. Feel that you can move smoothly through a word and move from one word to another without stopping. That’s fluency, or at least part of it. Think",
-      "original_text": "Study how fluent talking is done. You need to understand the way in which the activity of talking occurs physically. Sometimes explanations are inaccurate because information is omitted in the writer’s attempt to simplify and to be brief. Obtain a textbook from the library. Search out information that provides an explanation of how breathing for living and breathing for speaking occur and differ. Sit quietly. Focus on breathing in a natural way. Discover how air flows in and out of your mouth. When you begin to speak, part of the process changes. Discover how voice starts easily and gently when you are relaxed and unhurried. Notice how your lips and tongue and lower jaw move to shape the air and voice into words. Feel that you can move smoothly through a word and move from one word to another without stopping. That’s fluency, or at least part of it. Think",
-      "header": "What You Can Do to Help Yourself - The Stuttering Foundation > Solutions",
-      "h1": "What You Can Do to Help Yourself - The Stuttering Foundation",
-      "h2": "Solutions",
-      "h3": "",
-      "chunk_num": 0,
-      "is_partial": true
-    },
-    {
-      "text": "[What You Can Do to Help Yourself - The Stuttering Foundation > Solutions]\n\nto shape the air and voice into words. Feel that you can move smoothly through a word and move from one word to another without stopping. That’s fluency, or at least part of it. Think about the number of words you can speak comfortably in a sentence without straining for air. Focus on the speed of talking. Some words in a sentence are said quickly; others are said more slowly to make the message meaningful. The pitch of your voice rises when asking a question and loudness increases when angry. When you talk fluently, many physical actions occur in a coordinated, sequenced fashion. That’s one of the keys. Study these actions. Fluent talking is the behavior that you are trying to do more of. You need a solid awareness of the fluency model. Observe others when they talk fluently as well as observe yourself. Take notes. Don’t just enjoy fluency",
-      "original_text": "to shape the air and voice into words. Feel that you can move smoothly through a word and move from one word to another without stopping. That’s fluency, or at least part of it. Think about the number of words you can speak comfortably in a sentence without straining for air. Focus on the speed of talking. Some words in a sentence are said quickly; others are said more slowly to make the message meaningful. The pitch of your voice rises when asking a question and loudness increases when angry. When you talk fluently, many physical actions occur in a coordinated, sequenced fashion. That’s one of the keys. Study these actions. Fluent talking is the behavior that you are trying to do more of. You need a solid awareness of the fluency model. Observe others when they talk fluently as well as observe yourself. Take notes. Don’t just enjoy fluency",
-      "header": "What You Can Do to Help Yourself - The Stuttering Foundation > Solutions",
-      "h1": "What You Can Do to Help Yourself - The Stuttering Foundation",
-      "h2": "Solutions",
-      "h3": "",
-      "chunk_num": 1,
-      "is_partial": true
-    },
-    {
-      "text": "[What You Can Do to Help Yourself - The Stuttering Foundation > Solutions]\n\nbehavior that you are trying to do more of. You need a solid awareness of the fluency model. Observe others when they talk fluently as well as observe yourself. Take notes. Don’t just enjoy fluency when it occurs. Learn from it. What does fluent talking sound like, look like, physically feel like in your body? What does it emotionally feel like in your mind?",
-      "original_text": "behavior that you are trying to do more of. You need a solid awareness of the fluency model. Observe others when they talk fluently as well as observe yourself. Take notes. Don’t just enjoy fluency when it occurs. Learn from it. What does fluent talking sound like, look like, physically feel like in your body? What does it emotionally feel like in your mind?",
-      "header": "What You Can Do to Help Yourself - The Stuttering Foundation > Solutions",
-      "h1": "What You Can Do to Help Yourself - The Stuttering Foundation",
-      "h2": "Solutions",
-      "h3": "",
-      "chunk_num": 2,
-      "is_partial": true
-    },
-    {
-      "text": "Become informed about the nature of stuttering.  Much has been written which can reduce the mystery for you.  Experts have described the speech characteristics of stuttering (the repetitions, prolongations, or stopping of air flow, voice or movement); the accompanying behavior (such as jaw jerks, eye blinks, saying  um  or  well ); the typical feelings and attitudes; how stuttering develops over time; what is known about causes, and so on.  The depth of knowledge is your choice.  Be guided by your interest level and by a desire to become as objective and unemotional as possible about the disorder.",
+      "text": "to begin with, change your focus. one of the most difficult concepts to grasp is this : the behavior that occurs when you try - not - to - stutter contributes to the severity of the stuttering. try the opposite behavior : try to stutter. become very familiar with exactly what you do while stuttering if you are to change it. too difficult? you simply want the stuttering to go away — never to occur again. that ’ s a normal reaction. you dislike repeating. you do not want to hear or see or physically feel stuttering. the experiences of feeling “ stuck ” are frustrating and perhaps frightening. tremors in your lips or jaw may give rise to panic. it is hard work. harder than you have ever done before. it is less fearful to study and analyze stuttering under the guidance of a fluency therapist. but you can do some of the identifying and categorizing of behavior on your own if you remember to do this “ change work ” in small doses. don ’ t overwhelm yourself. tomorrow is another day. it took years for stuttering to develop to the level and in the particular pattern that occurs at this point in time. the process of unraveling the pattern and changing the disfluent behavior takes time also. study how fluent talking is done. you need to understand the way in which the activity of talking occurs physically. sometimes explanations are inaccurate because information is omitted in the writer ’ s attempt to simplify and to be brief. obtain a textbook from the library. search out information that provides an explanation of how breathing for living and breathing for speaking occur and differ. sit quietly. focus on breathing in a natural way. discover how air flows in and out of your mouth. when you begin to speak, part of the process changes. discover how voice starts easily and gently when you are relaxed and unhurried. notice how your lips and tongue and lower jaw move to shape the air and voice into words. feel that you can move smoothly through a word and move from one word to another without stopping. that ’ s fluency, or at least part of it. think about the number of words you can speak comfortably in a sentence without straining for air. focus on the speed of talking. some words in a sentence are said quickly ; others are said more slowly to make the message meaningful. the pitch of your voice rises when asking a question and loudness increases when angry. when you talk fluently, many physical actions occur in a coordinated, sequenced fashion",
       "header": "What You Can Do to Help Yourself - The Stuttering Foundation > Solutions",
       "h1": "What You Can Do to Help Yourself - The Stuttering Foundation",
       "h2": "Solutions",
       "h3": ""
     },
     {
-      "text": "Fifth, develop ability to cope with the stuttering moment itself.  Build on your analysis skills.  Direct yourself to focus on the stuttering as it is occurring in the present time-frame.  Reliving past difficulty or anticipating future failure is unhelpful in this section of the “change work.”  The residue from these negative emotions provides few clues for coping effectively with stuttering as it is happening now.  As you learn to listen, to view, and to physically feel the stuttering, continue to ask: “What occurred right there?”  And “What did I do next?” and “Then what resulted?”  Hunt for the consequences of your actions.  Make notes on your findings.",
+      "text": "sentence are said quickly ; others are said more slowly to make the message meaningful. the pitch of your voice rises when asking a question and loudness increases when angry. when you talk fluently, many physical actions occur in a coordinated, sequenced fashion. that ’ s one of the keys. study these actions. fluent talking is the behavior that you are trying to do more of. you need a solid awareness of the fluency model. observe others when they talk fluently as well as observe yourself. take notes. don ’ t just enjoy fluency when it occurs. learn from it. what does fluent talking sound like, look like, physically feel like in your body? what does it emotionally feel like in your mind? become informed about the nature of stuttering. much has been written which can reduce the mystery for you. experts have described the speech characteristics of stuttering ( the repetitions, prolongations, or stopping of air flow, voice or movement ) ; the accompanying behavior ( such as jaw jerks, eye blinks, saying um or well ) ; the typical feelings and attitudes ; how stuttering develops over time ; what is known about causes, and so on. the depth of knowledge is your choice. be guided by your interest level and by a desire to become as objective and unemotional as possible about the disorder. fifth, develop ability to cope with the stuttering moment itself. build on your analysis skills. direct yourself to focus on the stuttering as it is occurring in the present time - frame. reliving past difficulty or anticipating future failure is unhelpful in this section of the “ change work. ” the residue from these negative emotions provides few clues for coping effectively with stuttering as it is happening now. as you learn to listen, to view, and to physically feel the stuttering, continue to ask : “ what occurred right there? ” and “ what did i do next? ” and “ then what resulted? ” hunt for the consequences of your actions. make notes on your findings. experiment with stuttering. choose a word. next, say that word while holding your breath. hopefully, you will find that it ’ s impossible. but you can change that act of “ breath holding ” just as you will be able to change other stuttering behaviors. how? think back to the way in which the word is said smoothly. focus on the feeling of movement. get a clear picture of that smoothly said word. you can change consistently if you know clearly what you are doing and what",
       "header": "What You Can Do to Help Yourself - The Stuttering Foundation > Solutions",
       "h1": "What You Can Do to Help Yourself - The Stuttering Foundation",
       "h2": "Solutions",
       "h3": ""
     },
     {
-      "text": "Experiment with stuttering.  Choose a word.  Next, say that word while holding your breath.  Hopefully, you will find that it’s impossible.  But you can change that act of “breath holding” just as you will be able to change other stuttering behaviors.  How?  Think back to the way in which the word is said smoothly.  Focus on the feeling of movement.  Get a clear picture of that smoothly said word.  You can change consistently if you know clearly what you are doing and what you are trying to do.",
-      "header": "What You Can Do to Help Yourself - The Stuttering Foundation > Solutions",
-      "h1": "What You Can Do to Help Yourself - The Stuttering Foundation",
-      "h2": "Solutions",
-      "h3": ""
-    },
-    {
-      "text": "Will this practice in “breath holding” or any other stuttering done purposely get out-of-control?  Temporarily it may.  Here’s how to cope.  Practice doing milder types of stuttering.  You can end the breath holding immediately by “letting go” of it.  Don’t finish the word.  Just stop.  Get calmer.  Try again, later or the next day.  Stay in contact with stuttering as much as you can in small doses.  Experiment similarly with the other types of stuttering behavior that you do.",
+      "text": "stuttering behaviors. how? think back to the way in which the word is said smoothly. focus on the feeling of movement. get a clear picture of that smoothly said word. you can change consistently if you know clearly what you are doing and what you are trying to do. will this practice in “ breath holding ” or any other stuttering done purposely get out - of - control? temporarily it may. here ’ s how to cope. practice doing milder types of stuttering. you can end the breath holding immediately by “ letting go ” of it. don ’ t finish the word. just stop. get calmer. try again, later or the next day. stay in contact with stuttering as much as you can in small doses. experiment similarly with the other types of stuttering behavior that you do.",
       "header": "What You Can Do to Help Yourself - The Stuttering Foundation > Solutions",
       "h1": "What You Can Do to Help Yourself - The Stuttering Foundation",
       "h2": "Solutions",
       "h3": ""
     }
-  ],
-  "config": {
-    "chunk_size": 150,
-    "chunk_overlap": 35,
-    "min_chunk_size": 50,
-    "embedding_model": "all-MiniLM-L6-v2",
-    "embedding_dimension": 384
-  },
-  "stats": {
-    "total_words": 1264,
-    "total_chars": 7627,
-    "file_size_bytes": 7745,
-    "indexed_date": "2026-02-22T17:18:26.396348"
-  }
+  ]
 }

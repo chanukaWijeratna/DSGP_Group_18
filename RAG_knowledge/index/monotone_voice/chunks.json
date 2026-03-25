@@ -1,8 +1,8 @@
 {
-  "source_file": "RAG_knowledge\\original\\bad_habits\\monotone_voice.md",
+  "source_file": "RAG_knowledge\\original\\emotions\\monotone_voice.md",
   "file_name": "monotone_voice",
-  "category": "bad_habits",
-  "relative_path": "bad_habits\\monotone_voice.md",
+  "category": "emotions",
+  "relative_path": "emotions\\monotone_voice.md",
   "model": "all-MiniLM-L6-v2",
   "chunk_size_tokens": 512,
   "num_chunks": 9,
