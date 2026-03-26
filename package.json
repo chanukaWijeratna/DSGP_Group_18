@@ -1,0 +1,9 @@
+{
+  "name": "vocal-insight",
+  "version": "1.0.0",
+  "scripts": {
+    "backend": "cd backend && node server.js",
+    "frontend": "cd frontend && npm run dev",
+    "dev": "start cmd /k \"cd backend && node server.js\" && cd frontend && npm run dev"
+  }
+}

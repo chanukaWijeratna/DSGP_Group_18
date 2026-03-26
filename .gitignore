@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Credentials & secrets
+backend/users.json
+backend/feedback-system/config.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ML model checkpoints (large training artifacts)
+**/checkpoint-*/
+
+# IDE / OS
+.DS_Store
+.vscode/*
+*.suo
+*.local
+
+# Temp files
+**/temp_audio/
+*.tmp
