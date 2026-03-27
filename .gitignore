@@ -19,7 +19,9 @@ __pycache__/
 venv/
 env/
 
-# ML model checkpoints (large training artifacts)
+# ML models
+backend/*/models/
+backend/feedback-system/results/
 **/checkpoint-*/
 
 # IDE / OS
