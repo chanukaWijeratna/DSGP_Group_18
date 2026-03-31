@@ -669,6 +669,31 @@ export default function Record() {
         {background}
         <div className={styles.fadeOverlay} />
 
+        <button
+          onClick={() => { localStorage.removeItem('vi_user'); navigate('/login') }}
+          style={{
+            position: 'absolute',
+            top: '20px',
+            right: '24px',
+            zIndex: 10,
+            background: 'none',
+            border: '1px solid rgba(255,255,255,0.15)',
+            borderRadius: '8px',
+            color: 'rgba(255,255,255,0.4)',
+            fontSize: '0.62rem',
+            fontFamily: 'inherit',
+            fontWeight: 600,
+            letterSpacing: '0.12em',
+            padding: '6px 12px',
+            cursor: 'pointer',
+            transition: 'color 0.2s, border-color 0.2s',
+          }}
+          onMouseEnter={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.75)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.35)' }}
+          onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.4)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)' }}
+        >
+          LOG OUT
+        </button>
+
         <div className={styles.container}>
           <div className={styles.logo}>
             <img src="/LOGO.png" alt="Vocal Insight Logo" style={{ width: '380px', maxWidth: '85vw', height: 'auto' }} />
@@ -774,16 +799,29 @@ export default function Record() {
             style={{ display: 'none' }}
             onChange={handleUpload}
           />
-          <button className={styles.btn} style={{ padding: '10px 16px', lineHeight: 1.3 }} onClick={() => fileInputRef.current.click()}>
-            UPLOAD AUDIO FILE
-            <br />
-            <span style={{ color: '#ef4444', fontSize: '0.65rem' }}>[NOT RECOMMENDED]</span>
-          </button>
-
-          <div className={styles.divider}>OR</div>
 
           <button className={styles.btnSubmit} onClick={handleSubmit}>
             SUBMIT FOR ANALYSIS
+          </button>
+
+          <button
+            onClick={() => fileInputRef.current.click()}
+            style={{
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              color: 'rgba(255,255,255,0.3)',
+              fontSize: '0.65rem',
+              fontFamily: 'inherit',
+              fontWeight: 600,
+              letterSpacing: '0.12em',
+              padding: '4px 0',
+              transition: 'color 0.2s',
+            }}
+            onMouseEnter={e => e.currentTarget.style.color = 'rgba(255,255,255,0.55)'}
+            onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.3)'}
+          >
+            OR UPLOAD AN AUDIO FILE <span style={{ color: '#ef4444' }}>[NOT RECOMMENDED]</span>
           </button>
         </div>
 
