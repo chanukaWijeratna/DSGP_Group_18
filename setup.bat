@@ -36,7 +36,7 @@ echo       Python packages installed.
 echo.
 
 
-:: ── Step 3: Install frontend npm packages ──
+:: ── Step 3: Install frontend and backend npm packages ──
 echo [3/4] Installing frontend packages...
 cd /d "%ROOT%frontend"
 call npm install
@@ -45,6 +45,15 @@ if errorlevel 1 (
     pause & exit /b 1
 )
 echo       Frontend packages installed.
+
+echo       Installing backend packages...
+cd /d "%ROOT%backend"
+call npm install
+if errorlevel 1 (
+    echo [ERROR] Backend npm install failed.
+    pause & exit /b 1
+)
+echo       Backend packages installed.
 echo.
 
 
