@@ -23,8 +23,25 @@ if exist "%ROOT%venv" (
 echo.
 
 
-:: ── Step 2: Install Python packages ──
-echo [2/4] Installing Python packages from requirements.txt...
+:: ── Step 2: Check config.json ──
+echo [2/5] Checking API key configuration...
+if not exist "%ROOT%backend\feedback-system\config.json" (
+    echo.
+    echo   No API key found. Please enter your OpenRouter API key below.
+    echo   ^(Get one at https://openrouter.ai/keys^)
+    echo.
+    set /p USER_API_KEY="  Paste API key: "
+    echo { > "%ROOT%backend\feedback-system\config.json"
+    echo     "api_key": "!USER_API_KEY!" >> "%ROOT%backend\feedback-system\config.json"
+    echo } >> "%ROOT%backend\feedback-system\config.json"
+    echo       API key saved to config.json.
+)
+echo       config.json ready.
+echo.
+
+
+:: ── Step 3: Install Python packages ──
+echo [3/5] Installing Python packages from requirements.txt...
 call "%ROOT%venv\Scripts\activate.bat"
 pip install --upgrade pip --quiet
 pip install -r "%ROOT%requirements.txt"
@@ -37,7 +54,7 @@ echo.
 
 
 :: ── Step 3: Install frontend and backend npm packages ──
-echo [3/4] Installing frontend packages...
+echo [4/5] Installing frontend packages...
 cd /d "%ROOT%frontend"
 call npm install
 if errorlevel 1 (
@@ -58,7 +75,7 @@ echo.
 
 
 :: ── Step 4: Generate RAG index ──
-echo [4/4] Generating RAG knowledge index...
+echo [5/5] Generating RAG knowledge index...
 cd /d "%ROOT%backend\feedback-system"
 python indexing.py
 if errorlevel 1 (
