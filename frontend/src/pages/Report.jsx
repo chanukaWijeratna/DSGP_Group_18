@@ -282,7 +282,6 @@ export default function Report() {
     if (!report) return []
     const highlights = []
     const DISORDER_CHUNK_SEC = 3
-    const BAD_HABIT_CHUNK_SEC = 5
 
     const HIGHLIGHT_COLORS = {
       stuttering:         'rgba(239, 68, 68, 0.7)',
@@ -361,7 +360,6 @@ export default function Report() {
     // Split by h3 headers (### ...)
     const sectionRegex = /###\s+(.+)/g
     const parts = []
-    let lastIndex = 0
     let match
 
     const matches = []
@@ -430,10 +428,23 @@ export default function Report() {
       <div className={styles.page}>
         {background}
         <div className={styles.noData}>
-          <img src="/LOGO.png" alt="Vocal Insight" style={{ width: '280px', maxWidth: '70vw', height: 'auto' }} />
-          <p>No problems were detected in your speech.</p>
+          <img src="/LOGO.png" alt="Vocal Insight" style={{ width: '240px', maxWidth: '60vw', height: 'auto' }} />
+          <div className={styles.successBadge}>
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="8 12 11 15 16 9" />
+            </svg>
+          </div>
+          <h1 className={styles.successTitle}>WELL DONE!</h1>
+          <p className={styles.successSubtitle}>
+            Your speech is clear, confident, and fluent.
+          </p>
+          <p className={styles.successHint}>
+            No stuttering, slurring, filler words, pace issues, or emotional
+            concerns were detected in this recording. Keep up the great work.
+          </p>
           <button className={styles.noDataBtn} onClick={() => navigate('/record', { state: { clearAudio: true } })}>
-            RECORD AGAIN
+            RETURN
           </button>
         </div>
       </div>
