@@ -138,6 +138,11 @@ export default function Report() {
         label:    'STUTTERING',
         info:     `${stutter.severity_percentage}% of speech affected`,
         feedback: stutter.rag_feedback,
+        severityData: {
+          actual:    stutter.severity_percentage,
+          threshold: getThreshold('stuttering', report),
+          unit:      '% of speech affected',
+        },
       })
     }
 
@@ -148,19 +153,31 @@ export default function Report() {
         label:    'SLURRING',
         info:     `${slur.dysarthric_ratio}% of speech affected`,
         feedback: slur.rag_feedback,
+        severityData: {
+          actual:    slur.dysarthric_ratio,
+          threshold: getThreshold('dysathria', report),
+          unit:      '% of speech affected',
+        },
       })
     }
 
     const emotionFeedback = report.emotion_result?.rag_feedback || {}
     const dominant = report.emotion_result?.dominant_emotion
     const confidence = report.emotion_result?.confidence
+    const top3 = report.emotion_result?.top_3_emotions || []
     const emotionInfo = dominant
       ? `Dominant emotion: ${dominant} (${confidence}%)`
       : null
 
     for (const [key, label] of Object.entries(EMOTION_PROBLEM_LABELS)) {
       if (emotionFeedback[key]) {
-        list.push({ key, label, info: emotionInfo, feedback: emotionFeedback[key] })
+        list.push({
+          key,
+          label,
+          info: emotionInfo,
+          feedback: emotionFeedback[key],
+          emotionTop3: top3.length > 0 ? top3 : null,
+        })
       }
     }
 
@@ -174,6 +191,11 @@ export default function Report() {
           label:    BAD_HABIT_LABELS.filler_words,
           info:     `${filler.filler_rate_pct}% of speech affected`,
           feedback: filler.rag_feedback,
+          severityData: {
+            actual:    filler.filler_rate_pct,
+            threshold: getThreshold('filler_words', report),
+            unit:      '% of speech affected',
+          },
         })
       }
 
@@ -184,6 +206,11 @@ export default function Report() {
           label:    BAD_HABIT_LABELS.fast_speaking_rate,
           info:     `${pace.instability_rate_pct}% of speech unstable`,
           feedback: pace.rag_feedback,
+          severityData: {
+            actual:    pace.instability_rate_pct,
+            threshold: getThreshold('fast_speaking_rate', report),
+            unit:      '% of speech unstable',
+          },
         })
       }
     }
@@ -419,17 +446,84 @@ export default function Report() {
 
         {/* Problem tabs */}
         <div className={styles.tabs}>
-          {problems.map((p, i) => (
-            <button
-              key={p.key}
-              className={`${styles.tab} ${i === selectedIdx ? styles.tabActive : ''}`}
-              onClick={() => setSelectedIdx(i)}
-            >
-              <span className={styles.tabLabel}>Problem {i + 1}</span>
-              <span className={styles.tabProblem}>{p.label}</span>
-              {p.info && <span className={styles.tabInfo}>{p.info}</span>}
-            </button>
-          ))}
+          {problems.map((p, i) => {
+            const cfg = SEVERITY_CONFIG[p.key]
+            const color = cfg?.color || '#38bdf8'
+            const sd = p.severityData
+            return (
+              <button
+                key={p.key}
+                className={`${styles.tab} ${i === selectedIdx ? styles.tabActive : ''}`}
+                onClick={() => setSelectedIdx(i)}
+              >
+                <span className={styles.tabLabel}>Problem {i + 1}</span>
+                <span className={styles.tabProblem}>{p.label}</span>
+                {p.emotionTop3 ? (() => {
+                  const total = p.emotionTop3.reduce((s, e) => s + e.confidence, 0) || 1
+                  return (
+                    <div className={styles.tabEmotionWrap}>
+                      <div className={styles.tabEmotionLabels}>
+                        {p.emotionTop3.map((e) => {
+                          const pct = (e.confidence / total) * 100
+                          return (
+                            <span
+                              key={e.emotion}
+                              className={styles.tabEmotionLabelItem}
+                              style={{ width: `${pct}%` }}
+                            >
+                              {e.emotion}
+                            </span>
+                          )
+                        })}
+                      </div>
+                      <div className={styles.tabEmotionBar}>
+                        {p.emotionTop3.map((e) => {
+                          const ec = EMOTION_COLORS[e.emotion] || '#a855f7'
+                          const pct = (e.confidence / total) * 100
+                          return (
+                            <div
+                              key={e.emotion}
+                              className={styles.tabEmotionSegment}
+                              style={{ width: `${pct}%`, background: ec }}
+                              title={`${e.emotion} ${e.confidence}%`}
+                            />
+                          )
+                        })}
+                      </div>
+                    </div>
+                  )
+                })() : sd && sd.threshold != null ? (
+                  <div className={styles.tabGauge}>
+                    <div className={styles.tabGaugeTrack}>
+                      <div
+                        className={styles.tabGaugeFill}
+                        style={{
+                          width: `${Math.min(100, sd.actual)}%`,
+                          background: color,
+                          boxShadow: `0 0 10px ${color}80`,
+                        }}
+                      />
+                      <div
+                        className={styles.tabGaugeMarker}
+                        style={{ left: `${Math.min(100, sd.threshold)}%` }}
+                        title={`Threshold ${sd.threshold}%`}
+                      />
+                    </div>
+                    <div className={styles.tabGaugeLabel}>
+                      <span className={styles.tabGaugeActual} style={{ color }}>
+                        {sd.actual}%
+                      </span>
+                      <span className={styles.tabGaugeThresh}>
+                        threshold {sd.threshold}%
+                      </span>
+                    </div>
+                  </div>
+                ) : (
+                  p.info && <span className={styles.tabInfo}>{p.info}</span>
+                )}
+              </button>
+            )
+          })}
         </div>
 
         {/* Feedback sections */}
