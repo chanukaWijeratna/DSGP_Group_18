@@ -1,0 +1,21 @@
+Config,Embedding Model,Chunk Size (tokens),Top-K,Similarity Threshold,Retrieval Precision,Retrieval Recall,MRR,Remark
+R1,all-MiniLM-L6-v2,256,1,0.3,0.7143,0.7143,0.7143,MiniLM c256 k=1 single best
+R2,all-MiniLM-L6-v2,256,3,0.3,0.7048,0.9429,0.8048,MiniLM c256 k=3 baseline
+R3,all-MiniLM-L6-v2,256,5,0.3,0.5943,0.9429,0.8048,MiniLM c256 k=5 moderate
+R4,all-MiniLM-L6-v2,256,7,0.3,0.498,0.9714,0.8095,MiniLM c256 k=7 wider recall
+R5,all-MiniLM-L6-v2,256,10,0.3,0.4,0.9714,0.8095,MiniLM c256 k=10 max recall
+R6,all-MiniLM-L6-v2,512,1,0.3,0.7429,0.7429,0.7429,MiniLM c512 k=1 single best
+R7,all-MiniLM-L6-v2,512,3,0.3,0.6095,0.9429,0.8429,MiniLM c512 k=3 baseline
+R8,all-MiniLM-L6-v2,512,5,0.3,0.44,0.9714,0.85,MiniLM c512 k=5 moderate
+R9,all-MiniLM-L6-v2,512,7,0.3,0.3374,0.9714,0.85,MiniLM c512 k=7 wider recall
+R10,all-MiniLM-L6-v2,512,10,0.3,0.2705,1.0,0.8529,MiniLM c512 k=10 max recall
+R11,all-mpnet-base-v2,256,1,0.5,0.6857,0.6857,0.6857,mpnet c256 k=1 single best
+R12,all-mpnet-base-v2,256,3,0.5,0.6381,0.8,0.7381,mpnet c256 k=3 baseline
+R13,all-mpnet-base-v2,256,5,0.5,0.5771,0.8857,0.7581,mpnet c256 k=5 moderate
+R14,all-mpnet-base-v2,256,7,0.5,0.5184,0.9143,0.7622,mpnet c256 k=7 wider recall
+R15,all-mpnet-base-v2,256,10,0.5,0.4764,1.0,0.7725,mpnet c256 k=10 max recall
+R16,all-mpnet-base-v2,512,1,0.5,0.6571,0.6571,0.6571,mpnet c512 k=1 single best
+R17,all-mpnet-base-v2,512,3,0.5,0.581,0.8,0.719,mpnet c512 k=3 baseline
+R18,all-mpnet-base-v2,512,5,0.5,0.499,0.8857,0.739,mpnet c512 k=5 moderate
+R19,all-mpnet-base-v2,512,7,0.5,0.4574,0.9714,0.752,mpnet c512 k=7 wider recall
+R20,all-mpnet-base-v2,512,10,0.5,0.4171,1.0,0.7548,mpnet c512 k=10 max recall
