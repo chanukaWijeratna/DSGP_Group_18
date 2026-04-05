@@ -111,6 +111,16 @@ export default function Report() {
     audio.currentTime = ratio * duration
   }, [duration])
 
+  const seekToHighlight = useCallback((startSec) => {
+    const audio = audioRef.current
+    if (!audio) return
+    audio.currentTime = Math.max(0, startSec)
+    if (!isPlaying) {
+      audio.play().catch(() => {})
+      setIsPlaying(true)
+    }
+  }, [isPlaying])
+
   const formatTime = (s) => {
     const m = Math.floor(s / 60)
     const sec = Math.floor(s % 60)
@@ -343,6 +353,11 @@ export default function Report() {
   const parseFeedbackSections = (feedback) => {
     if (!feedback) return null
 
+    // Detect backend errors returned in place of real feedback
+    if (/^error\s*(generating|:)/i.test(feedback.trim())) {
+      return { error: feedback.trim() }
+    }
+
     // Split by h3 headers (### ...)
     const sectionRegex = /###\s+(.+)/g
     const parts = []
@@ -367,6 +382,11 @@ export default function Report() {
     const stepsSection = parts.find(p => /actionable improvement/i.test(p.title))
     const practiceSection = parts.find(p => /quick practice/i.test(p.title))
     const noteSection = parts.find(p => /quick note/i.test(p.title))
+
+    // No ### sections detected — treat as raw/unstructured feedback
+    if (parts.length === 0) {
+      return { raw: feedback.trim() }
+    }
 
     return { meaningSection, whySection, stepsSection, practiceSection, noteSection }
   }
@@ -541,6 +561,43 @@ export default function Report() {
             )
           }
 
+          if (sections.error) {
+            return (
+              <div className={`${styles.feedbackCard} ${styles.errorBox}`} key={selectedIdx}>
+                <div className={styles.markdownBody}>
+                  <div className={styles.boxHeader}>
+                    <div className={styles.boxIcon}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="8" x2="12" y2="12" />
+                        <line x1="12" y1="16" x2="12.01" y2="16" />
+                      </svg>
+                    </div>
+                    <h3>Feedback Unavailable</h3>
+                  </div>
+                  <p>
+                    We couldn't generate personalised guidance for this issue — the feedback
+                    service returned an error. The detection itself is valid; only the
+                    written feedback failed.
+                  </p>
+                  <p className={styles.errorDetail}><code>{sections.error}</code></p>
+                </div>
+              </div>
+            )
+          }
+
+          if (sections.raw) {
+            return (
+              <div className={styles.feedbackCard} key={selectedIdx}>
+                <div className={styles.markdownBody}>
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {sections.raw}
+                  </ReactMarkdown>
+                </div>
+              </div>
+            )
+          }
+
           return (
             <div className={styles.sectionGrid} key={selectedIdx}>
               {/* Box 1: What This Means + Why This May Happen */}
@@ -687,15 +744,21 @@ export default function Report() {
                   [...new Map(timelineHighlights.map(h => [h.label, h.color])).keys()].map(label => (
                     <div key={label} className={styles.highlightBar}>
                       {timelineHighlights.filter(h => h.label === label).map((h, i) => (
-                        <div
+                        <button
                           key={i}
+                          type="button"
                           className={styles.highlight}
                           style={{
                             left:  `${(h.startSec / duration) * 100}%`,
                             width: `${((h.endSec - h.startSec) / duration) * 100}%`,
                             background: h.color,
                           }}
-                          title={`${h.label} (${h.startSec}s–${h.endSec}s)`}
+                          title={`${h.label} (${formatTime(h.startSec)}–${formatTime(h.endSec)}) · click to play`}
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            seekToHighlight(h.startSec)
+                          }}
+                          aria-label={`Play ${h.label} from ${formatTime(h.startSec)}`}
                         />
                       ))}
                     </div>

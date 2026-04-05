@@ -69,6 +69,8 @@ embedding_model = SentenceTransformer(EMBEDDING_MODEL)
 client = OpenAI(
     base_url=ENDPOINT,
     api_key=API_KEY,
+    timeout=90.0,    # seconds — generous read timeout for slow provider responses
+    max_retries=3,   # auto-retry on timeouts, 429s, and 5xx errors
 )
 
 # Response format template
