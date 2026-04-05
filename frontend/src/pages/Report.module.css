@@ -717,6 +717,137 @@
 .severityGrid .severityCard:nth-child(3) { animation-delay: 0.24s; }
 .severityGrid .severityCard:nth-child(4) { animation-delay: 0.36s; }
 
+/* ── Emotion Breakdown ── */
+.emotionTitleArea {
+  text-align: center;
+  margin-top: 140px;
+  margin-bottom: 28px;
+  width: 100%;
+}
+
+.emotionTitle {
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.emotionCard {
+  width: 100%;
+  background: rgba(8, 18, 40, 0.8);
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  animation: cardFade 0.4s ease-out both;
+}
+
+.emotionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.dominantBadge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 999px;
+}
+
+.dominantLabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dominantEmotion {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: capitalize;
+  letter-spacing: 0.04em;
+}
+
+.dominantConf {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #c4b5fd;
+  font-variant-numeric: tabular-nums;
+}
+
+.frameStats {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.04em;
+}
+
+.emotionBars {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.emotionBarRow {
+  display: grid;
+  grid-template-columns: 110px 1fr 56px;
+  align-items: center;
+  gap: 14px;
+}
+
+.emotionName {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: capitalize;
+  letter-spacing: 0.04em;
+}
+
+.emotionBarTrack {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.emotionBarFill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.emotionPct {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 600px) {
+  .emotionBarRow {
+    grid-template-columns: 80px 1fr 46px;
+    gap: 10px;
+  }
+  .emotionName { font-size: 0.75rem; }
+  .emotionPct  { font-size: 0.78rem; }
+}
+
 /* ── No data fallback ── */
 .noData {
   position: relative;

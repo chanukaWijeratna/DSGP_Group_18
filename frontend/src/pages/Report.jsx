@@ -48,6 +48,17 @@ const BAD_HABIT_LABELS = {
   fast_speaking_rate: 'FAST SPEAKING RATE',
 }
 
+const EMOTION_COLORS = {
+  neutral:   '#94a3b8',
+  calm:      '#06b6d4',
+  happy:     '#eab308',
+  sad:       '#3b82f6',
+  angry:     '#ef4444',
+  fearful:   '#a855f7',
+  disgust:   '#10b981',
+  surprised: '#f97316',
+}
+
 export default function Report() {
   const { state } = useLocation()
   const navigate  = useNavigate()
@@ -615,6 +626,71 @@ export default function Report() {
               <span>{formatTime(currentTime)}</span>
               <span>{formatTime(duration || 0)}</span>
             </div>
+            </div>
+          </>
+        )}
+
+        {/* Emotion Breakdown */}
+        {report.emotion_result?.top_3_emotions?.length > 0 && (
+          <>
+            <div className={styles.emotionTitleArea}>
+              <h2 className={styles.emotionTitle}>EMOTION BREAKDOWN</h2>
+              <p className={styles.subtitle}>How your voice sounded across the recording</p>
+            </div>
+            <div className={styles.emotionCard}>
+              <div className={styles.emotionHeader}>
+                <div
+                  className={styles.dominantBadge}
+                  style={{
+                    background: `${EMOTION_COLORS[report.emotion_result.dominant_emotion] || '#a855f7'}1F`,
+                    borderColor: `${EMOTION_COLORS[report.emotion_result.dominant_emotion] || '#a855f7'}55`,
+                  }}
+                >
+                  <span className={styles.dominantLabel}>Dominant</span>
+                  <span className={styles.dominantEmotion}>
+                    {report.emotion_result.dominant_emotion}
+                  </span>
+                  <span
+                    className={styles.dominantConf}
+                    style={{ color: EMOTION_COLORS[report.emotion_result.dominant_emotion] || '#c4b5fd' }}
+                  >
+                    {report.emotion_result.confidence}%
+                  </span>
+                </div>
+                {(() => {
+                  const analyzed = report.emotion_result.frame_count || 0
+                  const skipped  = report.emotion_result.skipped_frames || 0
+                  const total    = analyzed + skipped
+                  if (total === 0 || skipped === 0) return null
+                  const pct = Math.round((analyzed / total) * 100)
+                  return (
+                    <div className={styles.frameStats}>
+                      {pct}% of audio confidently analyzed
+                    </div>
+                  )
+                })()}
+              </div>
+              <div className={styles.emotionBars}>
+                {report.emotion_result.top_3_emotions.map((e) => {
+                  const color = EMOTION_COLORS[e.emotion] || '#a855f7'
+                  return (
+                    <div key={e.emotion} className={styles.emotionBarRow}>
+                      <span className={styles.emotionName}>{e.emotion}</span>
+                      <div className={styles.emotionBarTrack}>
+                        <div
+                          className={styles.emotionBarFill}
+                          style={{
+                            width: `${e.confidence}%`,
+                            background: color,
+                            boxShadow: `0 0 12px ${color}66`,
+                          }}
+                        />
+                      </div>
+                      <span className={styles.emotionPct}>{e.confidence}%</span>
+                    </div>
+                  )
+                })}
+              </div>
             </div>
           </>
         )}
