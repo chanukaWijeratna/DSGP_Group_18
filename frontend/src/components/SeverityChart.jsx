@@ -58,22 +58,6 @@ export default function SeverityChart({ data, currentSessionId, color, threshold
         />
       ))}
 
-      {/* Threshold baseline */}
-      {threshold != null && (
-        <>
-          <line
-            x1={PAD.left} y1={thresholdY} x2={W - PAD.right} y2={thresholdY}
-            stroke="rgba(255, 255, 255, 0.45)" strokeWidth="1.5"
-            strokeDasharray="8 5"
-          />
-          <text
-            x={W - PAD.right + 2} y={thresholdY + 4}
-            fill="rgba(255, 255, 255, 0.5)"
-            fontSize="9" fontFamily="'Inter', sans-serif" fontWeight="700"
-            textAnchor="start"
-          >FLAGGED</text>
-        </>
-      )}
 
       {/* Y-axis labels */}
       {Y_TICKS.map(t => (
