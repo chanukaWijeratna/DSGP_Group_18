@@ -54,6 +54,8 @@ cd DSGP_Group_18
 
 Download the `model-config` folder from the shared Google Drive link and place it inside the repository root so the structure looks like this:
 
+Folder Link - https://drive.google.com/file/d/1vbBvoHLZVefpuotv32z70MGEjgdfSEBi/view?usp=sharing
+
 ```
 DSGP_Group_18/
 ├── model-config/
